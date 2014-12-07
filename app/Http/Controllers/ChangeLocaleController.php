@@ -33,10 +33,16 @@ class ChangeLocaleController extends Controller {
             App::setLocale($language);
         }
         else
-        {/**/ }
+        {/**/
+            return ;
+        }
 
-				return view('welcome');
-				
+                if( $language !=  Config::get('app.fallback_locale')){
+                    return redirect('/'.$language);
+                }else{
+                    return redirect('/');
+                }
+
 		//
 	}
 
