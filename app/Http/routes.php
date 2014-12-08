@@ -39,7 +39,8 @@ Route::get('/translate/{locale}', 'ChangeLocaleController@update');
  */
 
 
-Route::group(['prefix' => Config::get('app.locale_prefix'), 'middleware' => 'locale_helper'], function()
+//Route::group(['prefix' => Config::get('app.locale_prefix'), 'middleware' => 'locale_helper'], function()
+Route::group(['prefix' => Config::get('app.locale_prefix')], function()
 {
 
     Route::get(

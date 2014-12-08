@@ -8,7 +8,6 @@ use Validator;
 
 
 
-
 class LocaleHelper implements Middleware {
 
 	/**
@@ -21,7 +20,6 @@ class LocaleHelper implements Middleware {
     public function __construct()
     {
 
-//Session::set('language', 'ru');
 
         // get app locale now
         $this->locale = Config::get('app.locale');
