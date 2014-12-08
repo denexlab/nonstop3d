@@ -1,11 +1,13 @@
-<?php namespace ns3d\Http\Middleware;
+<?php namespace nonstop3d\Http\Middleware;
 
 use Closure;
 use Illuminate\Contracts\Routing\Middleware;
-use Illuminate\Support\Facades\Config;
-use App;
+use Config;
 use Session;
 use Validator;
+
+
+
 
 class LocaleHelper implements Middleware {
 
@@ -18,7 +20,6 @@ class LocaleHelper implements Middleware {
 	 */
     public function __construct()
     {
-
 
 //Session::set('language', 'ru');
 

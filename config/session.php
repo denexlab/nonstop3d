@@ -135,6 +135,6 @@ return [
 	|
 	*/
 
-	'secure' => false,
+	'secure' => true,
 
 ];
