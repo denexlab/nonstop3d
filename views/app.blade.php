@@ -51,12 +51,12 @@
 								{{ Auth::user()->name }} <b class="caret"></b>
 							</a>
 							<ul class="dropdown-menu">
-								<li><a href="/auth/logout"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+								<li><a href="{{ Config::get('app.locale_prefix') ? '/'.Config::get('app.locale_prefix') : '' }}/auth/logout"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
 							</ul>
 						</li>
 				@else
-						<li><a href="/auth/login"><i class="fa fa-btn fa-sign-in"></i>Login</a></li>
-						<li><a href="/auth/register"><i class="fa fa-btn fa-user"></i>Register</a></li>
+						<li><a href="{{ Config::get('app.locale_prefix') ? '/'.Config::get('app.locale_prefix') : '' }}/auth/login"><i class="fa fa-btn fa-sign-in"></i>Login</a></li>
+						<li><a href="{{ Config::get('app.locale_prefix') ? '/'.Config::get('app.locale_prefix') : '' }}/auth/register"><i class="fa fa-btn fa-user"></i>Register</a></li>
 				@endif
 				
 				

@@ -16,7 +16,7 @@
 					</div>
 				@endif
 
-				<form class="form-horizontal" role="form" method="POST" action="/password/email">
+				<form class="form-horizontal" role="form" method="POST" action="{{ Config::get('app.locale_prefix') ? '/'.Config::get('app.locale_prefix') : '' }}/password/email">
 					<input type="hidden" name="_token" value="{{ csrf_token() }}">
 					<div class="form-group">
 						<label for="email" class="col-sm-3 control-label">Email</label>
