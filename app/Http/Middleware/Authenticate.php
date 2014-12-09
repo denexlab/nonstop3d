@@ -41,7 +41,7 @@ class Authenticate implements Middleware {
 			}
 			else
 			{
-				return redirect()->guest('auth/login');
+				return redirect()->guest( (Config::get('app.locale_prefix') ? '/'.Config::get('app.locale_prefix') : '' ).'auth/login');
 			}
 		}
 
